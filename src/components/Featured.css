@@ -68,7 +68,7 @@
     border: none;
     gap: 8px;
 }
-.buttons .yellow{
+.buttons .marketing{
     background-color: #EB85331A;
     color: #FFB836;
     border: none;
@@ -76,7 +76,7 @@
     padding: 4px 16px 4px 16px;
     font-weight: 600;
 }
-.buttons .green{
+.buttons .design{
     background-color: #56CDAD1A;
     color: #56CDAD;
     border: none;
@@ -84,7 +84,7 @@
     padding: 4px 16px 4px 16px;
     font-weight: 600;
 }
-.buttons .purple{
+.buttons .business{
     background-color: #4640DE1A;
     color: #4640DE;
     border: none;
@@ -99,7 +99,7 @@
     font-size: 18px;
     font-weight: 600;
 }
-.buttons .orange{
+.buttons .technology{
     background-color: #FF65501A;
     color: #FF6550;
     border: none;

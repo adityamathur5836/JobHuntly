@@ -1,96 +1,3 @@
-/* body{
-    font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 700;
-}
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: transparent;
-    background-color: #F8F8FD;
-    padding: 10px 0;
-    padding-left: 4vw;
-    padding-right: 10vw;
-}
-.nav-logo{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    /* margin-right: 10vw; */
-/* }
-.nav-logo h2{
-    margin-top: auto;
-    margin-bottom: auto;
-    align-content: center;
-    cursor: pointer;
-    font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700px;
-    font-style: normal;
-}
-.nav-logo img{
-    height: 32px;
-    width: 32px;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    cursor: pointer;
-}
-.companies{
-    display: flex;
-    gap: 2vw;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: #515B6F;
-    font-weight: 500;
-    font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin-left: 50px;
-}
-.companies a{
-    cursor: pointer;
-}
-.left-nav{
-    display: flex;
-    flex-direction: row;
-}
-.login{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    height: 5vh;
-    margin-top: auto;
-    margin-bottom: auto;
-    align-items: center;
-    justify-content: center;
-}
-.login a{
-    color: #4640DE;
-    cursor: pointer;
-}
-.signup{
-    border-radius: 0px;
-    background-color: #4640DE;
-    color: white;
-    height: 50px;
-    width: 6vw;
-    font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-}
-.signup-btn{
-    border-left: 2px solid #D6DDEB;
-    margin-left: 1.5vw;
-    width: 10vw;
-    height: 50px;
-    
-} */ 
 body{
     font-family: "Familjen Grotesk", sans-serif;
     font-optical-sizing: auto;
@@ -139,6 +46,10 @@ body{
 .companies a{
     cursor: pointer;
 }
+.joblist{
+    color: #515B6F;
+    text-decoration: none;
+}
 .left-nav{
     display: flex;
     flex-direction: row;
@@ -167,6 +78,8 @@ body{
     font-weight: 700;
     border: none;
     cursor: pointer;
+    margin-top: 1%;
+
 }
 .signup-btn{
     border-left: 2px solid #D6DDEB;
@@ -185,50 +98,108 @@ body{
     background-color: #4640DE;
     margin: 5px 0;
 }
-
-@media screen and (max-width: 1024px) {
-    .navbar {
-        flex-direction: row;
-        align-items: start;
-        padding: 10px 4vw;
-    }
-    .left-nav {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-    .companies {
-        flex-direction: row;
-        gap: 10px;
-        text-align: center;
-        margin-left: 0;
-    }
-    .signup {
-        width: auto;
-        padding: 10px 20px;
-    }
-    .signup-btn {
-        border-left: none;
-        width: auto;
-        text-align: center;
-    }
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
-    .companies {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .signup {
-        width: 100%;
-    }
-    .login, .signup-btn {
-        display: none;
-    }
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #1f2937;
+    transition: 0.3s;
+}
+
+/* Animate bars into "X" when open */
+.hamburger .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 1024px) {
     .hamburger {
         display: flex;
     }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .login{
+        display: none;
+    }
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: #4640DE;
+        margin: 5px 0;
+    }
+    .companies{
+        display: none;
+    }
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: #4640DE;
+        margin: 5px 0;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .login{
+        display: none;
+    }
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: #4640DE;
+        margin: 5px 0;
+    }
+}
+.applied{
+    color: #515B6F;
+    text-decoration: none;
 }

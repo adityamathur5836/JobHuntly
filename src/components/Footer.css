@@ -10,6 +10,11 @@
     width: 100%;
     padding-bottom: 3vw;
 }
+.logo-div h2{
+    color: white;
+    margin-top: auto;
+    margin-left: 2%;
+}
 .footer{
     background-color: #202430;
     color: white;
@@ -35,6 +40,7 @@
 }
 .first p{
     width: 50%;
+    color: white;
 }
 .second{
     margin-left: -15%;
@@ -55,6 +61,7 @@
 .fourth p{
     width: 70%;
     margin-bottom: 10%;
+    color: white;
 }
 .fourth button{
     height: 2.7vw;
@@ -77,6 +84,9 @@ hr{
 .footerspara{
     padding-left: 3vw;
 }
+.footerspara p{
+    color: white;
+}
 .footersbuttons{
     margin-right: 10px;
     border: none;
@@ -98,4 +108,12 @@ hr{
 }
 .fb img{
     opacity: 200%;
+}
+.second p{
+    color: white;
+    font-weight: 100;
+}
+.third p{
+    color: white;
+    font-weight: 100;
 }

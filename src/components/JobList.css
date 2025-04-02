@@ -1,0 +1,95 @@
+.job-listings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F8FD;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.job-listings-container h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    width: 85%;
+    max-width: 1200px;
+}
+
+/* Job Card */
+.job-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border-left: 5px solid #007BFF;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Title */
+.job-card h2 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Job Company & Location */
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Job Tags */
+.job-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.job-tags span {
+    background-color: #007BFF;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Apply Button */
+.apply-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
