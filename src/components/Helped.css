@@ -1,0 +1,15 @@
+body {
+    background-color: #fffdfd;
+}
+
+.helped {
+    padding-top: 7vw;
+    text-align: center;
+}
+
+.helped h2{
+    font-weight: 400;
+    text-align: left;
+    color: #b0afaf;
+    padding-left: 8vw;
+}

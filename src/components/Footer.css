@@ -1,0 +1,101 @@
+.fullfooter{
+    width: 100%;
+    height: 100%;
+    background-color: #202430;
+    color: white;
+    justify-content: space-evenly;
+    padding-top: 64px;
+    /* padding-left: 2%; */
+    /* padding-right: 2%; */
+    width: 100%;
+    padding-bottom: 3vw;
+}
+.footer{
+    background-color: #202430;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0vw;
+    padding-bottom: 44px;
+    width: 100%;
+}
+.logo-div{
+    display: flex;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.footer p{
+    font-weight: 200;
+}
+.footer h4{
+    font-weight: 900;
+}
+.first p{
+    width: 50%;
+}
+.second{
+    margin-left: -15%;
+    margin-right: 10%
+}
+.third{
+    margin-right: 10%;
+}
+.fourth{
+    text-align: left;
+}
+.fourth input{
+    height: 2.5vw;
+    width: 14vw;
+    border: none;
+    padding-left: 10px;
+}
+.fourth p{
+    width: 70%;
+    margin-bottom: 10%;
+}
+.fourth button{
+    height: 2.7vw;
+    margin-left: 5px;
+    border: none;
+    background-color: #4640DE;
+    color: white;
+    font-weight: 700;
+}
+hr{
+    /* margin-bottom: 40vw; */
+    color: white;
+    margin-left: 3%;
+    margin-right: 7%;
+}
+.footersfooter{
+    display: flex;
+    justify-content: space-between;
+}
+.footerspara{
+    padding-left: 3vw;
+}
+.footersbuttons{
+    margin-right: 10px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 7vw;
+    display: flex;
+    gap: 10px;
+}
+.fb{
+    height: 30px;
+    width: 30px;
+    background-color: rgba(128, 128, 128, 0.235);
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    border: none;
+    opacity: 100%;
+}
+.fb img{
+    opacity: 200%;
+}

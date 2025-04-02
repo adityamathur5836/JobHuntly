@@ -1,0 +1,148 @@
+.categories{
+    padding-left: 7.5vw;
+    padding-right: 8vw;
+    padding-top: 7vw;
+}
+.heading{
+    display: flex;
+}
+.heading .category{
+    color: #26A4FF;
+}
+
+.category {
+    margin-left: 10px;
+}
+.category-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3vw;
+}
+.inner-category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.inside-inside-grid{
+    display: flex;
+}
+.inside-grid h3{
+    font-size: 24px;
+}
+.inside-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 25%;
+    height: 25%;
+    margin-right: auto;
+    text-align: left;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.inside-inside-grid img{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.inside-inside-grid p{
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 1vw;
+    color: #7C8493;
+    width: 80%;
+}
+.inside-grid{
+    text-align: left;
+    border: 1px solid #D6DDEB;
+    padding: 32px;
+}
+.marketing .inside-head-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4640DE;
+    width: 25%;
+    height: 25%;
+    margin-right: auto;
+    text-align: left;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    margin-bottom: -1vw;
+}
+.inside-grid:hover{
+    background-color: #4640DE;
+    color: white;
+}
+.posting{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -2vw;
+    background-color: #4640DE;
+    z-index: -10000;
+    margin-bottom: -2vw;
+}
+.posting div{
+    text-align: left;
+}
+.inside-posting{
+    margin-top: 7vh;
+    margin-right: 5vw;
+    margin-left: -4vw;
+}
+.posting div h2{
+    font-size: 48px;
+    width: 300px;
+    color: white;
+    margin-bottom: 1vw;
+}
+.posting div p{
+    margin-bottom: 2vw;
+    color: white;
+    font-weight: 500;
+}
+.posting div button{
+    color: #4640DE;
+    background-color: white;
+    border: none;
+    width: 10vw;
+    height: 6vh;
+    font-weight: 700;
+}
+.posting img{
+    margin-top: 68px;
+    margin-right: 2vw;
+    margin-left: 4vw;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;  
+    border-bottom: 100px solid white;  
+    rotate: 180deg;
+    margin-right: -2vw;
+    position: sticky;
+}
+.down-triangle{
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;  
+    border-bottom: 100px solid white;  
+    rotate: 360deg;
+    margin-left: -1vw;
+    margin-top: auto;
+    margin-right: 5vw;
+    position: sticky;
+    z-index: 0;
+    left: -2vw;
+}
