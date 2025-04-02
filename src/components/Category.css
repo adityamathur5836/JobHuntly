@@ -9,9 +9,8 @@
 .heading .category{
     color: #26A4FF;
 }
-
-.category {
-    margin-left: 10px;
+.category-grid {
+    margin-bottom: 30px;
 }
 .category-nav{
     display: flex;
@@ -26,9 +25,7 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-.inside-inside-grid{
-    display: flex;
-}
+
 .inside-grid h3{
     font-size: 24px;
 }
@@ -43,8 +40,9 @@
     text-align: left;
     border-radius: 50%;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 35px;
 }
+
 .inside-inside-grid img{
     margin-top: auto;
     margin-bottom: auto;
@@ -87,19 +85,13 @@
 .posting{
     display: flex;
     justify-content: space-evenly;
-    margin-top: -2vw;
     background-color: #4640DE;
-    z-index: -10000;
-    margin-bottom: -2vw;
+    z-index: -100;
 }
 .posting div{
     text-align: left;
 }
-.inside-posting{
-    margin-top: 7vh;
-    margin-right: 5vw;
-    margin-left: -4vw;
-}
+
 .posting div h2{
     font-size: 48px;
     width: 300px;
@@ -115,8 +107,6 @@
     color: #4640DE;
     background-color: white;
     border: none;
-    width: 10vw;
-    height: 6vh;
     font-weight: 700;
 }
 .posting img{
@@ -130,8 +120,8 @@
     border-left: 160px solid transparent;  
     border-bottom: 100px solid white;  
     rotate: 180deg;
-    margin-right: -2vw;
-    position: sticky;
+    position: relative;
+    left: -5px;
 }
 .down-triangle{
     width: 0;
@@ -139,10 +129,135 @@
     border-left: 160px solid transparent;  
     border-bottom: 100px solid white;  
     rotate: 360deg;
-    margin-left: -1vw;
     margin-top: auto;
-    margin-right: 5vw;
-    position: sticky;
     z-index: 0;
-    left: -2vw;
+    right: -5px;
+    position: relative;
+}
+
+.inside-container {
+    display: flex;
+    flex-direction: row
+}
+
+.category-title {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .inside-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h3{
+        margin: 0;
+    }
+    
+    .jobs-av {
+        margin: 0;
+    }
+
+    .inside-img {
+        margin-right: 20px;
+    }
+
+    .inside-inside-grid {
+        margin-right: auto;
+    }
+
+    .inside-posting {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .posting img {
+        display: none;
+    }
+
+    .posting div button {
+        width: 100%;
+    }
+
+    .posting div h2 {
+        font-size: 30px;
+    }
+
+    .inside-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .posting {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .inside-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h3{
+        margin: 0;
+    }
+    
+    .jobs-av {
+        margin: 0;
+    }
+
+    .inside-img {
+        margin-right: 20px;
+    }
+
+    .inside-inside-grid {
+        margin-right: auto;
+    }
+
+    .posting img {
+        object-fit: contain;
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .inside-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h3{
+        margin: 0;
+    }
+    
+    .jobs-av {
+        margin: 0;
+    }
+
+    .inside-img {
+        margin-right: 20px;
+    }
+
+    .inside-inside-grid {
+        margin-right: auto;
+    }
+
+    .posting img {
+        object-fit: contain;
+        max-width: 300px;
+    }
 }

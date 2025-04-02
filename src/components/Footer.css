@@ -22,7 +22,8 @@
     justify-content: space-evenly;
     padding-top: 0vw;
     padding-bottom: 44px;
-    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 .logo-div{
     display: flex;
@@ -41,13 +42,6 @@
 .first p{
     width: 50%;
     color: white;
-}
-.second{
-    margin-left: -15%;
-    margin-right: 10%
-}
-.third{
-    margin-right: 10%;
 }
 .fourth{
     text-align: left;
@@ -116,4 +110,35 @@ hr{
 .third p{
     color: white;
     font-weight: 100;
+}
+
+.footer-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second, .third {
+    margin-right: 200px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer-cont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+        justify-content: space-between
+
+    }
+
+    .footer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
 }

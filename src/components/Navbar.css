@@ -1,205 +1,251 @@
-body{
+body {
     font-family: "Familjen Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
-.navbar{
+
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background: transparent;
     background-color: #F8F8FD;
-    padding: 10px 4vw;
+    padding: 15px 4vw;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
-.nav-logo{
+
+.nav-logo {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
-.nav-logo h2{
-    margin: auto 0;
+
+.nav-logo h2 {
+    margin: 0;
     cursor: pointer;
     font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
+    font-size: 1.5rem;
 }
-.nav-logo img{
+
+.nav-logo img {
     height: 32px;
     width: 32px;
-    margin: auto 0;
     cursor: pointer;
 }
-.companies{
+
+.companies {
     display: flex;
     gap: 2vw;
-    margin: auto 0;
-    color: #515B6F;
-    font-weight: 500;
-    font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     margin-left: 50px;
+    align-items: center;
 }
-.companies a{
-    cursor: pointer;
-}
-.joblist{
+
+.nav-link {
     color: #515B6F;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 5px 0;
 }
-.left-nav{
+
+.nav-link:hover {
+    color: #4640DE;
+}
+
+.login {
     display: flex;
     flex-direction: row;
-}
-.login{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    height: 5vh;
+    gap: 15px;
     align-items: center;
-    justify-content: center;
 }
-.login a{
+
+.login a {
     color: #4640DE;
     cursor: pointer;
+    font-weight: 600;
 }
-.signup{
-    border-radius: 5px;
+
+.signup-btn {
+    border-left: 2px solid #D6DDEB;
+    margin-left: 1.5vw;
+    padding-left: 1.5vw;
+}
+
+.signup {
+    border-radius: 8px;
     background-color: #4640DE;
     color: white;
-    height: 50px;
-    width: 6vw;
+    height: 42px;
+    padding: 0 20px;
     font-family: "Familjen Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     font-weight: 700;
     border: none;
     cursor: pointer;
-    margin-top: 1%;
+    transition: background-color 0.2s ease;
+}
 
+.signup:hover {
+    background-color: #3631be;
 }
-.signup-btn{
-    border-left: 2px solid #D6DDEB;
-    margin-left: 1.5vw;
-    width: 10vw;
-    height: 50px;
-}
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-.hamburger div {
-    width: 30px;
-    height: 3px;
-    background-color: #4640DE;
-    margin: 5px 0;
-}
-/* Hamburger Menu */
-.hamburger {
+
+/* Hamburger Menu Button */
+.menu-button {
     display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 100;
 }
 
-.hamburger .bar {
+.bar {
     width: 30px;
     height: 3px;
-    background-color: #1f2937;
-    transition: 0.3s;
+    background-color: #4640DE;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-/* Animate bars into "X" when open */
-.hamburger .bar.open:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+/* Animate bars to form an X when menu is open */
+.bar.open:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger .bar.open:nth-child(2) {
+.bar.open:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger .bar.open:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+.bar.open:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    gap: 20px;
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
-.nav-links a {
+.mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-link {
+    color: #515B6F;
     text-decoration: none;
-    color: #1f2937;
+    padding: 15px 0;
     font-size: 18px;
-    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 1024px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: white;
-        width: 100%;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
+.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
 }
 
+.login-link {
+    color: #4640DE;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.signup-mobile {
+    background-color: #4640DE;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: "Familjen Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .signup {
+        padding: 0 15px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
-    .login{
+    .companies {
         display: none;
     }
-    .hamburger div {
-        width: 30px;
-        height: 3px;
-        background-color: #4640DE;
-        margin: 5px 0;
-    }
-    .companies{
+    
+    .login {
         display: none;
     }
-    .hamburger div {
-        width: 30px;
-        height: 3px;
-        background-color: #4640DE;
-        margin: 5px 0;
+    
+    .menu-button {
         display: flex;
-        flex-direction: column;
-        
     }
-
+    
+    .mobile-menu {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .login{
-        display: none;
+    .navbar {
+        padding: 12px 5vw;
     }
-    .hamburger div {
-        width: 30px;
-        height: 3px;
-        background-color: #4640DE;
-        margin: 5px 0;
+    
+    .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .nav-logo img {
+        height: 28px;
+        width: 28px;
     }
 }
-.applied{
-    color: #515B6F;
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 4vw;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-logo img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+/* Fix for any .joblist and .applied classes */
+.joblist, .applied {
+    color: inherit;
     text-decoration: none;
 }
